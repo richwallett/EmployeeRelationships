@@ -1,0 +1,27 @@
+<h1>Create Employee</h1>
+	<%= form_for(@employee) do |f| %>
+		<%= f.fields_for(@employee.employee_profile) do |t| %>
+			<%= t.label :name %>
+			<%= t.text_field :name %>
+			<br>
+			<%= t.label :day %>
+			<%= t.date_select :day, :start_year => 1970, :discard_year => true %>
+			<br>
+			<%= t.label :height %>
+			<%= t.number_field :height %>
+			<br>
+			<%= t.label :food %>
+			<%= t.text_field :food %>
+			<br>
+			<%= t.label :salary %>
+			<%= t.number_field :salary %>
+		<% end %>
+		<br>Team: 
+		<%= collection_select(@team, @team, Team.all, :name, :name)%>
+		<br>
+		<%= f.submit %>
+	<% end %>
+	<br>
+
+	<br>
+	<%= link_to "All employees", employees_path %>

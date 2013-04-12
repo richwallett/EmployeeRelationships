@@ -1,0 +1,14 @@
+<h1>Create Team</h1>
+	<%= form_for(@team) do |f| %>
+		<%= f.label :name %>
+		<br>
+		<%= f.text_field :name %>
+		<br>
+		<br>
+		<%= collection_select(@team, @team.employees, Employee.all, :id, :id)%>
+		<%= f.submit %>
+		<% end %>
+	<br>
+
+	<br>
+	<%= link_to "All teams", teams_path %>

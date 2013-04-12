@@ -1,0 +1,17 @@
+# == Schema Information
+#
+# Table name: employees
+#
+#  id            :integer          not null, primary key
+#  supervisor_id :integer
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  supervisor_id: 1
+
+two:
+  supervisor_id: 1

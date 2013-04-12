@@ -1,0 +1,8 @@
+<h1><%= @team.name %></h1>
+<br>
+Employees:
+<ul>
+<%= @team.employees.each do |e| %>
+	<%= e.name %>
+	<% end %>
+</ul>
